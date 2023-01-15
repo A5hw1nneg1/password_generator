@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Password Generator</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+
+<body>
+   <div class="heading"><span id="typing-text"></span><span class="input-cursor"></span></div>
+   <div class="content-box" id="password-text">
+    <div class = "password-box" id="password"></div>
+    <span class="confirm" id="confirmed"> copied &check; </span>
+    <img src="https://visualpharm.com/assets/808/Copy-595b40b65ba036ed117d4395.svg" height="75" width="75" onclick="selectText(); document.getElementById(`confirmed`).classList.toggle(`visibility`);"></img>
+    <img src="https://visualpharm.com/assets/317/Sign%20Up-595b40b65ba036ed117d45aa.svg" height="75" width="75" onclick="generate(passtype)"></img>
+</div>
+   <div class="content-box" id="selection">
+
+      <label class="rad-label">
+        <input type="radio" class="rad-input" name="rad" onclick="weak()">
+        <div class="rad-design"></div>
+        <div class="rad-text">Weak</div>
+      </label>
+    
+      <label class="rad-label">
+        <input type="radio" class="rad-input" name="rad" onclick="strong()">
+        <div class="rad-design"></div>
+        <div class="rad-text">Strong</div>
+      </label>
+    
+      <label class="rad-label">
+        <input type="radio" class="rad-input" name="rad" onclick="verystrong()">
+        <div class="rad-design"></div>
+        <div class="rad-text">Very Strong</div>
+      </label>
+    
+   </div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

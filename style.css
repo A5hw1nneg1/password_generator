@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 92vh;
+    background-image: linear-gradient(to bottom, #6dc7ff, #86c3ff, #a5bcff, #c6b4ff, #e6abff);
+}
+
+.heading {
+    font-family: 'Dosis', sans-serif;
+    margin: 8vh auto 8vh auto;
+    background-color: transparent;
+    width: 80vw;
+    height: 15vh;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #C822FF;
+
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fazein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fazeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.input-cursor {
+    background: #C822FF;
+    width: 2px;
+    height: 50px;
+    margin-left: 8px;
+    animation: blink .6s linear infinite alternate;
+}
+
+.content-box {
+    animation: fazein 2s linear 0s 1 normal both;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 20vh;
+    width: 80vw;
+    margin: 100px auto 100px auto;
+    background-color: transparent;
+}
+
+.password-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Dosis', sans-serif;
+    font-size: 40px;
+    color: #C822FF;
+    width: 50vw;
+    height: 12vh;
+    border-radius: 8px;
+    background-color:#EFC8FF;
+
+}
+
+img{
+    cursor: pointer;
+}
+
+
+.rad-label {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 100px;
+    padding: 14px 16px;
+    margin: 10px 0;
+  
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .rad-label:hover,
+  .rad-label:focus-within {
+    background: hsla(0, 0%, 80%, .14);
+  }
+  
+  .rad-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .rad-design {
+    width: 22px;
+    height: 22px;
+    border-radius: 100px;
+  
+    background: linear-gradient(to right bottom, #6dc7ff, #9005cb);
+    position: relative;
+  }
+  
+  .rad-design::before {
+    content: '';
+  
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+  
+    background: hsl(0, 0%, 90%);
+    transform: scale(1.1);
+    transition: .3s;
+  }
+  
+  .rad-input:checked+.rad-design::before {
+    transform: scale(0);
+  }
+  
+  .rad-text {
+    font-family: 'Dosis', sans-serif;
+    margin-left: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 900;
+    color: #C822FF;
+    transition: .3s;
+  }
+  
+  .rad-input:checked~.rad-text {
+    color: #8802b5;
+  }
+  
+  
+  /* ABS */
+  /* ====================================================== */
+  .abs-site-link {
+    position: fixed;
+    bottom: 40px;
+    left: 20px;
+    color: hsla(0, 0%, 0%, .5);
+    font-size: 16px;
+  }
+
+  .confirm{
+    font-family: 'Dosis', sans-serif;
+    opacity: 0;
+    position: absolute;
+    top: 36vh;
+    left: 70.5vw;
+    background: #C822FF;
+    padding: 4px;
+    border-radius: 10px;
+    color: #6dc7ff;
+  }
+  .visibility{
+    animation: fazein 2s linear 0s 1 normal both;
+    animation: fazeout 1s linear 0s 1 normal both;
+  }
